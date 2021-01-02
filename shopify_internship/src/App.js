@@ -8,15 +8,14 @@ const App = () => {
   const [movies, setMovies] = useState([]);
   const [title, setTitle] = useState("");
 
-  const searchResults = async () => {
-    const url = `http://www.omdbapi.com/?s=avengers&apikey=8e6731b`;
+  const searchResults = async (title) => {
+    const url = `http://www.omdbapi.com/?s=${title}&apikey=8e6731b`;
     const response = await fetch(url);
     const responseJSON = await response.json();
-    console.log(responseJSON);
-    setMovies(responseJSON.Search);
+    if (responseJSON.Search) setMovies(responseJSON.Search);
   };
   useEffect(() => {
-    searchResults();
+    searchResults(title);
   }, [title]);
   return (
     <div>

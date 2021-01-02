@@ -8,6 +8,7 @@ import Nominate from "./components/Nominate";
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [title, setTitle] = useState("");
+  const [nominee, setNominee] = useState([]);
 
   const searchResults = async (title) => {
     const url = `http://www.omdbapi.com/?s=${title}&apikey=8e6731b`;

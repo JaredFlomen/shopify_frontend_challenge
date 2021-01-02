@@ -3,6 +3,7 @@ import "./App.css";
 import Movies from "./components/Movies";
 import Header from "./components/Header";
 import Search from "./components/Search";
+import Nominate from "./components/Nominate";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -21,7 +22,7 @@ const App = () => {
     <div>
       <Header />
       <Search title={title} setTitle={setTitle} />
-      <Movies movies={movies} />
+      <Movies movies={movies} Nominate={Nominate} />
     </div>
   );
 };

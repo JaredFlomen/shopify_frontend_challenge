@@ -1,7 +1,12 @@
 import React from "react";
 
 const Search = (props) => {
-  return props.movies.map((movie) => <p>{movie.Title}</p>);
+  return (
+    <input
+      value={props.value}
+      onChange={(e) => props.setTitle(e.target.value)}
+    ></input>
+  );
 };
 
 export default Search;

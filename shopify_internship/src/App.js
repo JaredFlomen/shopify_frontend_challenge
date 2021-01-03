@@ -23,14 +23,26 @@ const App = () => {
     searchResults(title);
   }, [title]);
 
+  useEffect(() => {
+    const nominations = JSON.parse(localStorage.getItem("nominations"));
+    if (!nominations.length) return;
+    setNominee(nominations);
+  }, []);
+
+  const saveToLocalStorage = (movie) => {
+    localStorage.setItem("nominations", JSON.stringify(movie));
+  };
+
   const addNominee = (movie) => {
     const newNominees = [...nominee, movie];
     setNominee(newNominees);
+    saveToLocalStorage(newNominees);
   };
 
   const removeNominee = (movie) => {
     const updateNominees = nominee.filter((nom) => nom.imdbID !== movie.imdbID);
     setNominee(updateNominees);
+    saveToLocalStorage(updateNominees);
   };
 
   return (

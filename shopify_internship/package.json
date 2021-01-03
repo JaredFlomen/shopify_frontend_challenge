@@ -2,6 +2,7 @@
   "name": "shopify_internship",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://shopify-frontend-challenge.vercel.app/",
   "engines": {
     "node": "10.16.1",
     "npm": "6.9.0"

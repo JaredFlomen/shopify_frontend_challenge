@@ -2,14 +2,23 @@ import React from "react";
 
 const Movies = (props) => {
   const { Nominate } = props;
+
   return props.movies.map((movie) => (
-    <>
-      <p>
-        {movie.Title}, ({movie.Year})
-      </p>
-      <img src={movie.Poster} alt="poster" />
-      <Nominate />
-    </>
+    <div className="d-flex justify-content-start m-3">
+      <div className="column">
+        <img src={movie.Poster} height="300" alt="poster" />
+        <p>
+          {movie.Title}, ({movie.Year})
+        </p>
+        <button
+          onClick={() => {
+            props.addNominee(movie);
+          }}
+        >
+          <Nominate />
+        </button>
+      </div>
+    </div>
   ));
 };
 

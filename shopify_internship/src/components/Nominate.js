@@ -1,7 +1,7 @@
 import React from "react";
 
 const Nominate = () => {
-  return <p>Nominate to The Shoppies!</p>;
+  return <p>Nominate</p>;
 };
 
 export default Nominate;

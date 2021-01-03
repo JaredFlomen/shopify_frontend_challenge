@@ -37,6 +37,7 @@
     ]
   },
   "devDependencies": {
-    "boostrap": "^2.0.0"
+    "boostrap": "^2.0.0",
+    "netlify-cli": "^2.69.11"
   }
 }

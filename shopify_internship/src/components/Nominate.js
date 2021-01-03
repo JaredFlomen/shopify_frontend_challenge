@@ -1,7 +1,7 @@
 import React from "react";
 
 const Nominate = () => {
-  return <p>Nominate</p>;
+  return <span className="mr-2">Nominate</span>;
 };
 
 export default Nominate;

@@ -48,13 +48,13 @@ const App = () => {
         />
       </div>
       <div className="banner">
-        {nominee.length > 4 && (
+        {nominee.length === 5 && (
           <div class="alert alert-primary">
-            {nominee.length} Movies Nominated To The Shoppies!
+            Thank you for nominating 5 movies to The Shoppies!
           </div>
         )}
       </div>
-      <Header title="Nominations" />
+      {nominee.length > 0 && <Header title="Nominations" />}
       <div className="row">
         <Movies
           movies={nominee}

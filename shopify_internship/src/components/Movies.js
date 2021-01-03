@@ -14,10 +14,11 @@ const Movies = (props) => {
     <div className="d-flex justify-content-start m-3">
       <div className="column">
         <img src={movie.Poster} height="300" alt="poster" />
-        <p>
-          {movie.Title}, ({movie.Year})
-        </p>
+        <p>{movie.Title}</p>
+        <p>{movie.Year}</p>
         <button
+          className="btn btn-primary"
+          height="50"
           disabled={isNominated(movie)}
           onClick={() => {
             props.addNominee(movie);

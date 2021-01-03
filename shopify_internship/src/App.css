@@ -2,3 +2,9 @@
   overflow-x: auto;
   flex-wrap: nowrap;
 }
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

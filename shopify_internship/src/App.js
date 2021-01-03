@@ -47,6 +47,13 @@ const App = () => {
           nominee={nominee}
         />
       </div>
+      <div className="banner">
+        {nominee.length > 4 && (
+          <div class="alert alert-primary">
+            {nominee.length} Movies Nominated To The Shoppies!
+          </div>
+        )}
+      </div>
       <Header title="Nominations" />
       <div className="row">
         <Movies
@@ -55,7 +62,6 @@ const App = () => {
           addNominee={removeNominee}
         />
       </div>
-      {nominee.length > 4 && <p>5 Nominated</p>}
     </div>
   );
 };

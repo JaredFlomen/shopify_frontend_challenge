@@ -4,7 +4,8 @@ const Search = (props) => {
   return (
     <div className="col col=sm-4">
       <input
-        placeholder="Search a movie to nominate"
+        class="form-control"
+        placeholder="Search for a movie to nominate"
         value={props.value}
         onChange={(e) => props.setTitle(e.target.value)}
       ></input>

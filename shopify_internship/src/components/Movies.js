@@ -1,7 +1,14 @@
 import React from "react";
 
 const Movies = (props) => {
-  const { Nominate } = props;
+  const { Nominate, nominee } = props;
+
+  const isNominated = function (movie) {
+    if (!nominee) return false;
+    const checkNom = nominee.find((e) => e.imdbID === movie.imdbID);
+    if (!checkNom) return false;
+    return true;
+  };
 
   return props.movies.map((movie) => (
     <div className="d-flex justify-content-start m-3">
@@ -11,6 +18,7 @@ const Movies = (props) => {
           {movie.Title}, ({movie.Year})
         </p>
         <button
+          disabled={isNominated(movie)}
           onClick={() => {
             props.addNominee(movie);
           }}

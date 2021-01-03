@@ -2,10 +2,13 @@ import React from "react";
 
 const Search = (props) => {
   return (
-    <input
-      value={props.value}
-      onChange={(e) => props.setTitle(e.target.value)}
-    ></input>
+    <div className="col col=sm-4">
+      <input
+        placeholder="Search a movie to nominate"
+        value={props.value}
+        onChange={(e) => props.setTitle(e.target.value)}
+      ></input>
+    </div>
   );
 };
 

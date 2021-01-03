@@ -35,10 +35,17 @@ const App = () => {
 
   return (
     <div className="container-fluid movie-app">
-      <Header title="The Shoppies" />
-      <Search title={title} setTitle={setTitle} />
       <div className="row">
-        <Movies movies={movies} Nominate={Nominate} addNominee={addNominee} />
+        <Header title="The Shoppies" />
+        <Search title={title} setTitle={setTitle} />
+      </div>
+      <div className="row">
+        <Movies
+          movies={movies}
+          Nominate={Nominate}
+          addNominee={addNominee}
+          nominee={nominee}
+        />
       </div>
       <Header title="Nominations" />
       <div className="row">
@@ -48,6 +55,7 @@ const App = () => {
           addNominee={removeNominee}
         />
       </div>
+      {nominee.length > 4 && <p>5 Nominated</p>}
     </div>
   );
 };

@@ -2,7 +2,7 @@
 
 ## Live Demo
 
-The application is deployed to Heroku(https://evening-spire-48768.herokuapp.com/)
+The application is deployed to [Heroku](https://evening-spire-48768.herokuapp.com/)
 
 ## Getting Started
 

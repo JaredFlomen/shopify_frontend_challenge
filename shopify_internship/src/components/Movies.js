@@ -25,7 +25,7 @@ const Movies = (props) => {
             props.addNominee(movie);
           }}
         >
-          <Nominate />
+          <Nominate key={movie.imdbID}/>
         </button>
       </div>
     </div>

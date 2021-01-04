@@ -1,5 +1,9 @@
 # Shopify Frontend Challenge - Jared Flomen
 
+## Live Demo
+
+The application is deployed to Heroku(https://evening-spire-48768.herokuapp.com/)
+
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.
